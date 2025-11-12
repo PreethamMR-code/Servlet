@@ -23,7 +23,8 @@ public class FoodServlet extends HttpServlet {
         String payment = req.getParameter("payment");
 
         PrintWriter out = resp.getWriter();
-        out.println("<html><head><title>Food Confirmation</title>");
+        out.println("<html>");
+        out.println("<head><title>Food Confirmation</title>");
         out.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>");
 
         out.println("</head><body><div class='card'>");

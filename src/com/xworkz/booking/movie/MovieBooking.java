@@ -25,7 +25,8 @@ public class MovieBooking extends HttpServlet {
         PrintWriter print= resp.getWriter();
 
         print.println("<html>");
-        print.println("<head><title>Booking Confirmation</title>");
+        print.println("<head>");
+        print.println("<title>Booking Confirmation</title>");
         print.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>");
         print.println("</head>");
         print.println("<body>");
