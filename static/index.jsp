@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container text-center mt-5">
+    <div class="card shadow p-5 mx-auto" style="max-width: 600px;">
+        <h1 class="mb-4 text-primary">Booking Project</h1>
+
+
+        <div class="list-group">
+            <a href="Coffee.jsp" class="list-group-item list-group-item-action"> Order Coffee </a>
+            <a href="CoffeeLand.jsp" class="list-group-item list-group-item-action"> Coffee Land</a>
+            <a href="Cafeteria.jsp " class="list-group-item list-group-item-action"> Cafeteria </a>
+            <a href="Customer.jsp" class="list-group-item list-group-item-action"> Customer </a>
+            <a href="CustomerFeedBack.jsp" class="list-group-item list-group-item-action"> CustomerFeedBack </a>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
