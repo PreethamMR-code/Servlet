@@ -1,8 +1,9 @@
-package com.xworkz.coffee;
+package com.xworkz.coffee.servlets;
 
 import com.xworkz.coffee.dto.CoffeeDTO;
-import com.xworkz.coffee.service.CoffeeImpl;
-import com.xworkz.coffee.service.CoffeeInterface;
+import com.xworkz.coffee.exception.InvalidDataException;
+import com.xworkz.coffee.impl.CoffeeImpl;
+import com.xworkz.coffee.inter.CoffeeInterface;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,18 +35,32 @@ public class CoffeeServlet extends HttpServlet {
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("CoffeeResult.jsp");
 
-        req.setAttribute("type",type);
-        req.setAttribute("price",price);
-        req.setAttribute("quantity",quantity);
-        req.setAttribute("former",former);
-        req.setAttribute("loc",loc);
 
-        requestDispatcher.forward(req,resp);
-        System.out.println("doPost closed..");
+
+
 
         CoffeeDTO coffeeDTO = new CoffeeDTO(type,price,quantity,former,loc);
 
         CoffeeInterface coffeeInterface = new CoffeeImpl();
-        coffeeInterface.validateDetails(coffeeDTO);
+        try {
+            coffeeInterface.validateDetails(coffeeDTO);
+            System.out.println("success valid");
+
+            req.setAttribute("type",type);
+            req.setAttribute("price",price);
+            req.setAttribute("quantity",quantity);
+            req.setAttribute("former",former);
+            req.setAttribute("loc",loc);
+
+            req.setAttribute("success", "successfully validate ..");
+
+
+
+        } catch (InvalidDataException e) {
+            req.setAttribute("fail", "in validate ..");
+            System.err.println("invalid");
+        }
+        requestDispatcher.forward(req,resp);
+        System.out.println("doPost closed..");
     }
 }

@@ -15,7 +15,9 @@
       <h3 class="text-center mb-4 text-success">Coffee Details Submitted</h3>
 
       <div class="border p-4 rounded shadow-sm bg-white">
-
+<h1>
+ <p style="color: green"><strong>${success} </strong> </p>
+ <p style="color: red"><strong>${fail} </strong> </p></h1>
         <p><strong>Coffee Type:</strong> ${type}</p>
         <p><strong>Price:</strong> ${price}</p>
         <p><strong>Quantity:</strong> ${quantity}</p>

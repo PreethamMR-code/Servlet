@@ -14,7 +14,7 @@
     <div class="card shadow-lg p-4 mx-auto" style="max-width: 550px;">
         <h3 class="text-center mb-4">Cafeteria Details</h3>
 
-        <form action="CafeteriaResult.jsp" method="post">
+        <form action="CafeteriaResult" method="post">
 
             <div class="mb-3">
                 <label class="form-label">Name</label>

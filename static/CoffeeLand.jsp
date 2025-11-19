@@ -15,7 +15,7 @@
 
         <h3 class="text-center mb-4">Enter Coffee Land Details</h3>
 
-        <form action="CoffeeLandResult.jsp" method="post">
+        <form action="CoffeeLandResult" method="post">
 
             <div class="mb-3">
                 <label class="form-label">Size by Acre</label>
