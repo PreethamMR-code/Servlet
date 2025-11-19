@@ -18,7 +18,7 @@
             <a href="CoffeeLand.jsp" class="list-group-item list-group-item-action"> Coffee Land</a>
             <a href="Cafeteria.jsp " class="list-group-item list-group-item-action"> Cafeteria </a>
             <a href="Customer.jsp" class="list-group-item list-group-item-action"> Customer </a>
-            <a href="CustomerFeedBack.jsp" class="list-group-item list-group-item-action"> CustomerFeedBack </a>
+
 
         </div>
     </div>

@@ -15,7 +15,7 @@
 
         <h3 class="text-center mb-4">Enter Customer Details</h3>
 
-        <form action="CustomerResult.jsp" method="post">
+        <form action="Customer" method="post">
 
             <div class="mb-3">
                 <label class="form-label">Name</label>
