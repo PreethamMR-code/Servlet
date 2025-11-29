@@ -42,4 +42,5 @@ build/
 /*.iml
 /.smarttomcat
 /logs
+*.xml
 # test contribution
