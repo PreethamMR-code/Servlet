@@ -178,6 +178,6 @@ public class PresidentQuery {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        }
     }
+}
 
