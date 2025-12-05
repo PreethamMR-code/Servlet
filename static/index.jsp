@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>MyMatrimony</title>
+
+    <title>Pharma project</title>
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -10,15 +14,24 @@
 
 <div class="container text-center mt-5">
     <div class="card shadow p-5 mx-auto" style="max-width: 600px;">
+
         <h1 class="mb-4 text-primary">Matrimony Project</h1>
 
 
         <div class="list-group">
             <a href="Matrimony.jsp" class="list-group-item list-group-item-action"> Matrimony form </a>
 
+        <h1 class="mb-4 text-primary">Pharma Project</h1>
+
+        <div class="list-group">
+            <a href="registration.jsp" class="list-group-item list-group-item-action"> Register here </a>
+
+
         </div>
     </div>
 </div>
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

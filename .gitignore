@@ -35,6 +35,7 @@ build/
 .vscode/
 
 ### Mac OS ###
+<<<<<<< HEAD
 .DS_Store
 
 /target
@@ -44,3 +45,6 @@ build/
 /logs
 *.xml
 # test contribution
+
+.DS_Store
+
