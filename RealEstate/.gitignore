@@ -35,15 +35,4 @@ build/
 .vscode/
 
 ### Mac OS ###
-
 .DS_Store
-
-/target
-/.idea
-/*.iml
-/.smarttomcat
-/logs
-# test contribution
-
-.DS_Store
-
