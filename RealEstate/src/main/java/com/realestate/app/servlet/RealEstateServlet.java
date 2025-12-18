@@ -78,13 +78,13 @@ public class RealEstateServlet  extends HttpServlet {
 
             req.setAttribute("realEstateDTO", dto);
 
-            req.getSession().setAttribute("realEstateDTO",dto);
+//            req.getSession().setAttribute("realEstateDTO",dto);
 
             req.setAttribute("message","");
 
         }else {
             req.setAttribute("message","search  results not found");
-            req.setAttribute("realEstateDTO",null);
+//            req.setAttribute("realEstateDTO",null);
         }
         req.getRequestDispatcher("Search.jsp").forward(req,resp);
     }

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static java.sql.DriverManager.getConnection;
+
 public class RealEstateDAOImpl implements RealEstateDAO{
 
 
@@ -175,4 +177,26 @@ public class RealEstateDAOImpl implements RealEstateDAO{
 
         return realEstateDTOS;
     }
+
+
+
+    @Override
+    public boolean deleteByEmail(String email) {
+
+        String sql = "DELETE FROM real_estate_inquiry WHERE email = ?";
+
+        try (Connection con =  DriverManager.getConnection(URl,USER,PASS);
+             PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setString(1, email);
+            int rows = ps.executeUpdate();
+
+            return rows > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

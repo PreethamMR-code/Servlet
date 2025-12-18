@@ -7,11 +7,23 @@ function validateForm() {
             isValid = false;
         }
 
+//        const fullName = document.getElementById('fullName').value.trim();
+//            if (fullName.length < 4) {
+//                showError('fullName', 'Enter at least 4 characters for name');
+//                isValid = false;
+//            }
+
     const email = document.getElementById('email').value;
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             showError('email', 'Enter valid email address');
             isValid = false;
         }
+
+//        const email = document.getElementById('email').value.trim();
+//              if (email === '' || !email.includes('@') || !email.includes('.')) {
+//                  showError('email', 'Enter a basic valid email (must contain @ and .)');
+//                  isValid = false;
+//              }
 
     const propertyType = document.getElementById('propertyType').value;
         if (propertyType === "") {
@@ -46,5 +58,3 @@ function validateForm() {
         const errors = document.querySelectorAll('.error');
         errors.forEach(err => err.textContent = "");
     }
-
-
