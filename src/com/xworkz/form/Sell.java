@@ -12,7 +12,7 @@ public class Sell extends GenericServlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 
-        String aname = servletRequest.getParameter("aname");
+        String cname = servletRequest.getParameter("cname");
         String acname = servletRequest.getParameter("acname");
         String city = servletRequest.getParameter("city");
         String state = servletRequest.getParameter("state");
@@ -24,7 +24,7 @@ public class Sell extends GenericServlet {
         String firstTime = servletRequest.getParameter("firsTime");
 
 
-        System.out.println("Full name :" + aname);
+        System.out.println("Full name :" + cname);
         System.out.println("Last name :" + acname);
         System.out.println("City :" + city);
         System.out.println("State:" + state);
