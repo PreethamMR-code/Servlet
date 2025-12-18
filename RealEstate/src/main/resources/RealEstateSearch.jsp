@@ -71,9 +71,14 @@
                 <button type="submit" name="submit" value="search"
                         class="btn btn-primary w-100">Search</button>
             </div>
+
             <div class="col">
-                <button type="reset" class="btn btn-secondary w-100">Clear</button>
+               <a href="RealEstateSearch.jsp"
+                  class="btn btn-secondary w-100">
+                   Clear
+               </a>
             </div>
+
         </div>
 
         <!-- ERROR MESSAGE -->
@@ -83,7 +88,7 @@
 
         <!-- TABLE RESULT -->
         <c:if test="${realEstateList != null}">
-            <table class="table table-striped table-hover mt-4">
+            <table class="table table-striped table-hover mt-4" id="propertyResultTable">
                 <thead class="table-dark">
                     <tr>
                         <th>Full Name</th>
@@ -105,11 +110,28 @@
                             <td>${item.message}</td>
 
                             <td>
-                                <a href="Update?emailId=${item.email}"
-                                   class="btn btn-sm btn-warning">
-                                    Edit
-                                </a>
-                            </td>
+                                               <a href="Update?emailId=${item.email}"
+                                                  class="btn btn-sm btn-warning">
+                                                   Edit
+                                               </a>
+                                           </td>
+
+                                           <!-- DELETE COLUMN -->
+                                           <td>
+
+                                               <form action="Delete" method="post" class="d-inline">
+                                                   <input type="hidden" name="emailId" value="${item.email}">
+                                                   <input type="hidden" name="source" value="property">
+                                                   <button type="submit"
+                                                           class="btn btn-sm btn-danger"
+                                                           onclick="return confirm('Are you sure you want to delete?')">
+                                                       Delete
+                                                   </button>
+                                               </form>
+
+                                           </td>
+
+
                         </tr>
                     </c:forEach>
                 </tbody>
@@ -117,6 +139,7 @@
         </c:if>
     </form>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -137,4 +137,17 @@ public class RealEstateServiceImpl implements RealEstateService{
         System.out.println("property not valid");
         return Collections.emptyList();
     }
+
+
+
+    @Override
+    public boolean deleteByEmail(String email) {
+
+
+        if (email != null && email.contains("@")) {
+            return realEstateDAO.deleteByEmail(email);
+        }
+        return false;
+    }
+
 }

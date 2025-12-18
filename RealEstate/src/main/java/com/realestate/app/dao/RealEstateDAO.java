@@ -19,4 +19,7 @@ public interface RealEstateDAO {
     default List<RealEstateDTO>  findByPropertyType(String propertyType){
         return Collections.emptyList();
     }
+
+    boolean deleteByEmail(String email);
+
 }

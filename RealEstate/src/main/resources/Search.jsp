@@ -69,35 +69,63 @@
                         Search
                     </button>
                 </div>
+
+
                 <div class="col">
-                    <button type="reset"  value="Clear" class="btn btn-secondary w-100">
-                        Clear
-                    </button>
+                   <a href="Search.jsp"
+                      class="btn btn-secondary w-100">
+                       Clear
+                   </a>
                 </div>
+
             </div>
 
             <!-- Display Search Result -->
             <c:if test="${realEstateDTO != null}">
-                <div class="result-box mt-3">
+                <div class="result-box mt-3" id="searchResultBox">
                     <h5>Search Result</h5>
-                    <p><strong>Full Name:</strong> ${sessionScope.realEstateDTO.fullName}</p>
-                    <p><strong>Email :</strong> ${sessionScope.realEstateDTO.email}</p>
-                    <p><strong>Property Type:</strong> ${sessionScope.realEstateDTO.propertyType}</p>
-                    <p><strong>Budget:</strong> ${sessionScope.realEstateDTO.budget}</p>
-                    <p><strong>Message:</strong> ${sessionScope.realEstateDTO.message}</p>
 
+
+           <%--
+           <p><strong>Full Name:</strong> ${sessionScope.realEstateDTO.fullName}</p>
+           <p><strong>Email :</strong> ${sessionScope.realEstateDTO.email}</p>
+           <p><strong>Property Type:</strong> ${sessionScope.realEstateDTO.propertyType}</p>
+           <p><strong>Budget:</strong> ${sessionScope.realEstateDTO.budget}</p>
+           <p><strong>Message:</strong> ${sessionScope.realEstateDTO.message}</p>
+           --%>
+
+
+        <p><strong>Full Name:</strong> ${realEstateDTO.fullName}</p>
+        <p><strong>Email:</strong> ${realEstateDTO.email}</p>
+        <p><strong>Property Type:</strong> ${realEstateDTO.propertyType}</p>
+        <p><strong>Budget:</strong> ${realEstateDTO.budget}</p>
+        <p><strong>Message:</strong> ${realEstateDTO.message}</p>
 
                     <a href="Update?emailId=${realEstateDTO.email}"
                        class="btn btn-warning btn-sm mt-2">Edit</a>
+
+
+
                 </div>
             </c:if>
 
+
             <!-- Error Message -->
             <c:if test="${message != null}">
-                <p class="error mt-2">${message}</p>
+                <p class="error mt-2" id="errorMessage">${message}</p>
             </c:if>
 
         </form>
+
+                                   <form action="Delete" method="post" class="d-inline">
+                                       <input type="hidden" name="emailId" value="${realEstateDTO.email}">
+                                       <input type="hidden" name="source" value="email">
+                                       <button type="submit"
+                                               class="btn btn-danger btn-sm mt-2"
+                                               onclick="return confirm('Are you sure you want to delete?')">
+                                           Delete
+                                       </button>
+                                   </form>
     </div>
 
 
